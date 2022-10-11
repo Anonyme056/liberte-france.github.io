@@ -26,6 +26,10 @@
             background-color: #222;
             color: #e6e6e6;
         }
+	
+	.copyd {
+		color: #e6e6e6;
+	}
 		  b {
 		  		color: Blue;
 		  }
@@ -102,9 +106,11 @@ néanmois, il existe une condition supplémentaire sur la défense d'un bien. Ce
                 $( "body" ).removeClass( "dark" );
                 $( "b" ).removeClass( "bn" );
                 $( ".change" ).text( "Mode Sombre" );
+		$( ".copy" ).removeClass( "copyd" )
             } else {
                 $( "body" ).addClass( "dark" );
                 $( "b" ).addClass( "bn" );
+		$( ".copy" ).addClass( "copy.d" );
                 $( ".change" ).text( "Mode Clair" );
             }
         });
