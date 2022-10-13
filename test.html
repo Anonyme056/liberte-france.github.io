@@ -8,11 +8,6 @@
 "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
 	<style>
-	
-		body{
-			color: white
-		}
-		
 		label {
 			display: none;
 			color: white;
@@ -74,11 +69,21 @@
 </head>
 <body>
 
-<br />
-
-	<a class="retour" href="index.html">Retourner à l'acceuil</a>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"></label>
+    <ul>
+      <li><a class="active" href="index.html">Accueil</a></li>
+      <li><a class="active" href="test.html">Faire le test</a></li>
+		<li><a class="change" href="#">Mode Sombre</a></li>
+    </ul>
+  </nav>
 
 <br /><br />
+
 	<div>
 	<h3>Question 1</h3>
 	<p>Une personne donne des coups de poing à un policier lors de son arrestation</label><br />
@@ -158,6 +163,22 @@
 			}
         });
 	</script>
+	
+	<script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( "b" ).removeClass( "bn" );
+                $( ".change" ).text( "Mode Sombre" );
+                $( "change" ).removeClass( "ms" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( "change" ).addClass( "ms" );
+                $( "b" ).addClass( "bn" );
+                $( ".change" ).text( "Mode Clair" );
+            }
+        });
+    </script>
 
 </body>
 </html>
