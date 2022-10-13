@@ -3,65 +3,32 @@
 <head>
 	<title>Accueil</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" type="text/css" href="CSS.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<script src=
 "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
      
     <style>
-        .mode {
-            float:right;
-        }
-        .change {
-            cursor: pointer;
-            border: 1px solid #555;
-            border-radius: 40%;
-            width: 20px;
-            text-align: center;
-            padding: 5px;
-            margin-left: 8px;
-        }
-        .dark{
-            background-color: #222;
-            color: #e6e6e6;
-        }
-		  b {
-		  		color: Blue;
-		  }
-		  .bn {
-		  		color: orange;
-		  }
-		
-		  .button {
-		  		text-decoration: none;
-				list-style: none;
-				border-radius: 10px;
-				background-color: blue;
-				padding: 1%;
-				color: white;
-		  }
-		
-		  .ms {
-			   margin-left: 70%;
-		  }
+
     </style>
 </head>
 <body>
-
-<div class="menu">
-	<nav>
-		<ul>
-			<li>
-				<a href="index.html">Accueil</a>
-			</li>
-			<li>
-				<a href="test.html">Faire le test</a>
-			</li>
-				<span class="change" style="color: white; margin-left: 62%;">Mode Sombre</span>
-		</ul>
-	</nav>
-</div>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"></label>
+    <ul>
+      <li><a class="active" href="index.html">Accueil</a></li>
+      <li><a class="active" href="test.html">Faire le test</a></li>
+		<li><a class="change" href="#">Mode Sombre</a></li>
+    </ul>
+  </nav>
 
 	<h1>La Liberté à la légitime Défense</h1>
 	<p>Sur ce site, nous allons parler du sujet suivant : jusqu'où peut on avoir recours à la Liberté de légitime Défense</p>
@@ -115,10 +82,12 @@
             if( $( "body" ).hasClass( "dark" )) {
                 $( "body" ).removeClass( "dark" );
                 $( "b" ).removeClass( "bn" );
+                $( "copy" ).removeClass( "copyd" );
                 $( ".change" ).text( "Mode Sombre" );
                 $( "change" ).removeClass( "ms" );
             } else {
                 $( "body" ).addClass( "dark" );
+                $( "copy" ).addClass( "copyd" );
                 $( "change" ).addClass( "ms" );
                 $( "b" ).addClass( "bn" );
                 $( ".change" ).text( "Mode Clair" );
